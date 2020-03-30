@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.apache.cordova.CWT"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "org.apache.cordova.CWT"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "org.apache.cordova.CWT"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "org.apache.cordova.CWT"
+    }
+  }
+}

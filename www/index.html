@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>CWT</title>
+    </head>
+    <body>
+            <div id='imageBox'>
+                <img id='logo' src="img/formlogo.png" alt="">
+            </div> 
+            <p id='loading'>Loading...</p>
+                <div id='counterItems'>
+                    <p id="counter">--:--</p>
+                    <button class='actionButton' id="a3"> Cancel countdown </button>
+                </div>
+            <div id="actionButtons">
+                <button class='actionButton' id="a1"> I'm going to break </button> <br>
+                <button class='actionButton' id="a2">I'll take my lunch </button>
+            </div>
+            <div id='footer'><p>Developed by <b>André López</b> </p></div>
+            
+
+        <style>
+            #body{
+                overflow: hidden;
+            }
+            #counterItems{
+                text-align: center;
+                display: none;
+            }
+            #counter{
+                margin: 0 auto;
+               text-align: center;
+               margin-top: 13px;
+               font-size: 7em;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #loading{
+                display: none;
+                text-align: center;
+                font-size: 2em;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #footer{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                color: black;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            .actionButton{
+                font-size: 1.5em;
+                padding: 15px 18px 15px 18px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-radius: 15px;
+                
+            }
+            .actionButton:focus{
+                outline: none;
+            }
+            #a1{
+                background-color: rgb(38, 44, 54);
+                color: white;
+                border: 4px solid rgb(99, 111, 131);
+            }
+            #a3{
+                background-color: rgb(54, 19, 19);
+                color: white;
+                border: 4px solid rgb(100, 39, 39);
+                margin-top: 13px;
+            }
+            #a2{
+                margin-top: 15px;
+                background-color: rgb(88, 50, 35);
+                color: white;
+                border: 4px solid rgb(190, 114, 64);
+            }
+            #actionButtons{
+                text-align: center;
+                margin-top: 50px;
+            }
+            #logo{
+                width: 220px;
+                height: 95px;
+            }
+            #imageBox{
+                margin: 0 auto;
+                width: 220px;
+                height: 95px;
+                margin-top: 30%;
+            }
+        </style>
+       <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+    </body>
+</html>
